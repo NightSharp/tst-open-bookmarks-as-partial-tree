@@ -7,6 +7,10 @@
 
 import Configs from '/extlib/Configs.js';
 
+export const kGROUP_TAB_TEMPORARY_STATE_NOTHING = 0;
+export const kGROUP_TAB_TEMPORARY_STATE_PASSIVE = 1;
+export const kGROUP_TAB_TEMPORARY_STATE_AGGRESSIVE = 2;
+
 export const configs = new Configs({
   context_openPartialTreeFromHere: true,
   context_openAll: false,
@@ -17,6 +21,7 @@ export const configs = new Configs({
   container_openAllRecursively: true,
 
   openDiscarded: true,
+  groupTabTemporaryState: kGROUP_TAB_TEMPORARY_STATE_PASSIVE,
 
   TSTID: null,
   groupTabUrl: null,

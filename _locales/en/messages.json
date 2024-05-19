@@ -22,6 +22,13 @@
 
   "config_openDiscarded_label": { "message": "Keep tabs pended until they become active" },
 
+  "groupTab_temporary_label": { "message": "Close this tab when there are no more children" },
+  "groupTab_temporaryAggressive_label": { "message": "Close this tab when there is one or less child" },
+  "config_groupTabTemporaryState_caption": { "message": "Default state of group tabs:" },
+  "config_groupTabTemporaryState_option_default": { "message": "Check to nothing" },
+  "config_groupTabTemporaryState_option_checked_before": { "message": "Check to the \"" },
+  "config_groupTabTemporaryState_option_checked_after": { "message": "\"" },
+
   "config_containerRedirectKey_label_before": { "message": "Redirect Key of the " },
   "config_containerRedirectKey_containerBookmarks_label": { "message": "Container Bookmarks" },
   "config_containerRedirectKey_containerBookmarks_uri": { "message": "https://addons.mozilla.org/firefox/addon/container-bookmarks/" },

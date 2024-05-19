@@ -10,6 +10,8 @@ import {
   configs,
   ensureTSTDetected,
   callTSTAPI,
+  kGROUP_TAB_TEMPORARY_STATE_PASSIVE,
+  kGROUP_TAB_TEMPORARY_STATE_AGGRESSIVE,
 } from '/common/common.js';
 
 import * as ContextualIdentities from './contextual-identities.js';
@@ -155,11 +157,23 @@ async function collectBookmarkItems(root, recursively) {
     }
     items.unshift({
       title:     '',
-      url:       `${configs.groupTabUrl}?title=${encodeURIComponent(root.title)}&temporaryAggressive=true`,
+      url:       `${configs.groupTabUrl}?title=${encodeURIComponent(root.title)}&${generateTemporaryStateParam()}`,
       discarded: false
     });
   }
   return items;
+}
+
+function generateTemporaryStateParam() {
+  switch (configs.groupTabTemporaryState) {
+    case kGROUP_TAB_TEMPORARY_STATE_PASSIVE:
+      return 'temporary=true';
+    case kGROUP_TAB_TEMPORARY_STATE_AGGRESSIVE:
+      return 'temporaryAggressive=true';
+    default:
+      break;
+  }
+  return '';
 }
 
 export async function openAllBookmarksWithStructure(id, { discarded, cookieStoreId, recursively } = {}) {

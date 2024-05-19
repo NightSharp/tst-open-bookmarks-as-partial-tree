@@ -22,6 +22,13 @@
 
   "config_openDiscarded_label": { "message": "読み込みを保留した状態でタブを開く" },
 
+  "groupTab_temporary_label": { "message": "子タブがすべてなくなったらこのタブを閉じる" },
+  "groupTab_temporaryAggressive_label": { "message": "子タブが1つ以下になったらこのタブを閉じる" },
+  "config_groupTabTemporaryState_caption": { "message": "グループ化用のタブの初期状態" },
+  "config_groupTabTemporaryState_option_default": { "message": "何もチェックしない" },
+  "config_groupTabTemporaryState_option_checked_before": { "message": "「" },
+  "config_groupTabTemporaryState_option_checked_after": { "message": "」をチェック済みにする" },
+
   "config_containerRedirectKey_label_before": { "message": "\u200b" },
   "config_containerRedirectKey_containerBookmarks_label": { "message": "Container Bookmarks" },
   "config_containerRedirectKey_containerBookmarks_uri": { "message": "https://addons.mozilla.org/firefox/addon/container-bookmarks/" },
